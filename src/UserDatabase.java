@@ -7,4 +7,10 @@ public class UserDatabase {
 	 public void addUser(User user){
 		 users.add(user);
 	 }
+	 
+	 public User getUser(int index){
+	    User user = users.get(index);
+		return user;
+	    
+	 }
 }

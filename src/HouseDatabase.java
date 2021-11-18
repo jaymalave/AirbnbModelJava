@@ -6,4 +6,9 @@ public class HouseDatabase {
 	 public void addHouse(House house){
 		 houses.add(house);
 	 }
+	 
+	 public House getHouse(int index){
+		    House house = houses.get(index);
+			return house;
+	 }
 }

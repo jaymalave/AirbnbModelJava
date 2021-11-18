@@ -33,8 +33,8 @@ public class Utils {
      }
     
     public void registerHouse(){
-	   	 System.out.println("Enter host_id");
-	   	 int host_id = sc.nextInt();
+	   	 System.out.println("Enter house_id");
+	   	 int house_id = sc.nextInt();
 		 System.out.println("Enter owner_id");
 		 int owner_id = sc.nextInt();
 		 System.out.println("Enter customer_id");
@@ -45,8 +45,25 @@ public class Utils {
 		 int occup_count = sc.nextInt();
 		 System.out.println("Enter city");
 		 String city = sc.next();
-		 House house = new House(host_id, owner_id, customer_id, address, false, occup_count, city);
+		 House house = new House(house_id, owner_id, customer_id, address, false, occup_count, city);
 		 HouseDatabase houseDb = new HouseDatabase();
 		 houseDb.addHouse(house);
+    }
+    public User getUserDetails(int index){
+    	UserDatabase userDb = new UserDatabase();
+  	    User user = userDb.getUser(index);
+  	    return user;
+    }
+    
+    public Host getHostDetails(int index){
+    	HostDatabase hostDb = new HostDatabase();
+    	Host host = hostDb.getHost(index);
+    	return host;
+    }
+    
+    public House getHouseDetails(int index){
+    	HouseDatabase houseDb = new HouseDatabase();
+    	House house = houseDb.getHouse(index);
+    	return house;
     }
 }

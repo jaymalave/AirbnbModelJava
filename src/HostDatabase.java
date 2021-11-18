@@ -7,4 +7,9 @@ public class HostDatabase {
 	 public void addHost(Host host){
 		 hosts.add(host);
 	 } 
+	 
+	 public Host getHost(int index){
+		    Host host = hosts.get(index);
+			return host;
+	 }
 }

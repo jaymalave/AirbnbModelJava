@@ -1,4 +1,4 @@
-import java.util.Date;
+
 
 public class Host {
     int host_id;
@@ -14,5 +14,9 @@ public class Host {
     	this.is_super_host = is_super_host;
     	this.email = email;
     }  
+    
+    public void setSuperHost(){
+    	 this.is_super_host = true;
+    }
 }
 
